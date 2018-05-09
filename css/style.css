@@ -8,6 +8,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+    z-index: -1000;
   }
   .hill1 {
     background: #9db56d;
@@ -17,6 +18,7 @@
     position: absolute;
     bottom: 145px;
     left: 7%;
+    z-index: -1000;
   }
   .hill2 {
     background: #466e61;
@@ -26,12 +28,14 @@
     position: absolute;
     bottom: 110px;
     right: 7%;
+    z-index: -1000;
   }
   .tree {
     height: 150px;
     width: 150px;
     background-color: #6a976c;
     border-radius: 100%;
+    z-index: -1000;
   }
   .trunk {
     width: 0px;
@@ -41,6 +45,7 @@
     border-color: transparent transparent #374544 transparent;
     margin-top: 54px;
     margin-left: 65px;
+    z-index: -1000;
   }
   .leftbranch {
     width: 0px;
@@ -52,6 +57,7 @@
     position: absolute;
     margin-top: 12.5px;
     margin-left: -25px;
+    z-index: -1000;
   }
   .rightbranch {
     width: 0px;
@@ -63,21 +69,25 @@
     position: absolute;
     margin-top: 4px;
     margin-left: 9px;
+    z-index: -1000;
   }
   .tree1 {
     position: absolute;
     bottom: 180px;
     left: 11%;
+    z-index: -1000;
   }
   .tree2 {
     position: absolute;
     bottom: 160px;
     left: calc(28%);
+    z-index: -1000;
   }
   .tree3 {
     position: absolute;
     bottom: 185px;
     right: 11.5%;
+    z-index: -1000;
   }
 
   #robot {
@@ -364,5 +374,9 @@ footer {
 .Cvcard {
   background-color: white;
   border-radius: 50px;
+}
+
+.robot{
+  width: 10%;
 }
 
