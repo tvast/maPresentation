@@ -276,3 +276,93 @@
   50% { opacity:0; }
   100% { opacity:1; }
 }
+
+.vert {
+  color: #008000;
+}
+.vert {
+  color: #008000;
+}
+
+.card {
+  width: 100%;
+
+}
+
+.toggleCv {
+  display: none;
+  /*visibility: hidden;*/
+
+}
+
+.toggledCv {
+  display: block;
+}
+
+.black {
+  color: black;
+}
+
+.logow{
+  width: 50%;
+}
+
+.border {
+  border: solid black 1px;
+}
+
+.borderBottom {
+  border-bottom: solid #2196F3 2px;
+}
+
+.bigtitle {
+  font-size: 2em
+}
+
+
+
+.title {
+  font-family: 'Lobster', cursive;
+  
+}
+
+.titleCv  {
+  font-family: 'Lobster', cursive;
+  border-left: solid #2196F3 20px;
+  color: #2196F3;
+  font-size: 3em;
+}
+
+.titleWork  {
+  /*font-family: 'Lobster', cursive;*/
+  color: #2196F3;
+  font-size: 2em;
+  /*border-bottom: solid #2196F3 2px;*/
+  text-align: center;
+}
+
+.action {
+    position: absolute;
+    -ms-transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+    /*float: right*/
+
+}
+
+.highlight {
+  border-bottom: solid #2196F3 2px;
+  font-weight: bold;
+}
+
+footer {
+  position: fixed; 
+  bottom: 0px; 
+  width: 100%;
+}
+
+.Cvcard {
+  background-color: white;
+  border-radius: 50px;
+}
+
