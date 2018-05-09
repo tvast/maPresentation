@@ -29,17 +29,27 @@
     <h2>sur l'éditeur de présentation</h2>
     <h3>Nous allons commencer votre présentation</h3>
     <p>Quelle est votre prénom ?</p>
+    
 </div>
 <h1 ></h1>
 <!-- <span class="white-text" id="typed"></span> -->
 
 <!-- form -->
 
-<form id="frm1">
+<div class="container center">
+  
+    <div class="progress">
+          <div id="progressbar" class="determinate blue" style="width:0 %"></div>
+        </div>
+
+   <!-- <a onclick="switchQh ()" class="btn-floating btn-large waves-effect waves-light blue"><i class="fa fa-arrow-left" aria-hidden="true"></i></a> -->
+   <!-- <a onclick="progressBar()" id="right" class="btn-floating btn-large waves-effect waves-light blue"><i class="fa fa-arrow-right" aria-hidden="true"></i></a> -->
+
+   <form id="frm1">
 
     <div id="0" class="toggled Cvcard center z-depth-5">
 
-      <h3 class="blue-text" id="typed" class="title blue-text"><!-- <span ></span> --></h3>
+      <h3 class="title blue-text"><span id="typed"></span></h3>
       <div class="row">
         <div class="col s4">
           <!-- Promo Content 1 goes here -->
@@ -49,7 +59,7 @@
           <div class="row">
             <div class="input-field col s6 center">
               <input name="input1" id="first_name2" type="text" class="validate">
-              <label  for="first_name2">votre réponse</label>
+              <label class="active" for="first_name2">votre réponse</label>
             </div>
           </div>
           <div class="col s4">
@@ -464,6 +474,71 @@
     
 
     <form>
+      
+      <div id="modal1" class="modal">
+    <div class="modal-content z-depth-5">     
+        <!-- header du cv -->
+        <div class="row">
+          <div class="col s12">
+            <p class="titleCv" id="head1"></p>
+            <p class="titleWork center" id="title"></p>
+          </div>
+        </div>
+        <!-- Info user -->
+          <div class="row">
+            <div class="col s7 push-s5">
+              <span class="">
+                <p class="highlight"><i class="fa fa-university" aria-hidden="true"></i> FORMATION PROFESSIONNELLE</p>
+                <p id="fp"></p>
+                <p class="highlight"><i class="fa fa-suitcase" aria-hidden="true"></i>
+                EXPERIENCE</p>
+                <p id="ex"></p>
+                <p class="highlight">
+                <i class="fa fa-flag" aria-hidden="true"></i> 
+                LANGUE</p>
+                <p id="lg"></p>
+                <p class="highlight"><i class="fa fa-paper-plane" aria-hidden="true"></i> 
+                LOISIRS</p>
+                <p id="ls"></p>
+                <p class="highlight"><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                MES ATOUTS</p>
+                <p id="ma"></p>
+                <p class="" id="sub"></p>
+              </span>
+            </div>
+            <div class="col s5 pull-s7">
+              <div>
+                <img width="100%" class="left" src="super.jpg">
+              </div>
+              <div>
+              <br>
+                <p class="" id="head2">
+                </p>
+                <span class="flow-text"></span>
+              </div>
+            </div>
+            </div>
+        <p>Ce CV est bizarre ! Mais comment faire un vrai CV ? Consultez ce site !<a target="blank" href="http://cvenligne.onisep.fr/index.php/"> Onisep cv en ligne</a></p>
+
+      
+    </div>
+        <div class="modal-footer">
+          <a class=" modal-action modal-close waves-effect waves-green btn-flat">Merci</a>
+          <input type='button' id='btn' value='Imprimer cv' onclick='printDiv();'>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div id="reponsecv" class="center reponse toggleCv">
+  <h1 class="blue-text">Votre cv très special</h1>
+</div>
+</div>
 
 
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="robot" x="0" y="0" viewBox="0 0 600 800" enable-background="new 0 0 600 800" xml:space="preserve">
@@ -548,6 +623,15 @@
   </div>
 </div>
 
+<footer class="page-footer blue lighten-1 tagline">
+  <div class="footer-copyright">
+    <div class="center">
+      © 2017 Code by Théophile Vast in his <i class="fa fa-rocket" aria-hidden="true"></i> - Conception : AC Janvier 2004 - Mise à jour Janvier 2013</p>
+      <br>
+    </div>
+  </div>
+</footer>
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
@@ -566,8 +650,39 @@
   });
 </script>
 
-<script type="text/javascript" src="js/step.js">
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/generator.js"></script>
+<script type="text/javascript" src="js/step.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
 </script>
 
+<script type="text/javascript">
+  
+  function printDiv() 
+{
+
+  var divToPrint=document.getElementById('modal1');
+
+  var newWin=window.open('','Print-Window');
+
+  newWin.document.open();
+
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+  newWin.document.close();
+
+  setTimeout(function(){newWin.close();},10);
+
+}
+</script>
 </body>
 </html>
